@@ -1,6 +1,6 @@
 # DAY 4 HOMEWORK
 #
-# Name:
+# Name: Tatsuya Sekiguchi
 
 # For this week's homework, the answer to each question should be a dataframe
 # (tibble)
@@ -10,11 +10,16 @@
 # HINT: This repo includes the gapminder.csv file in the data_raw folder
 # HINT: I've written some of the code for you.
 
-gapminder <-
+
+install.packages("tidyverse")
+read_csv("data_raw/gapminder.csv")
+gapminder <- read_csv("data_raw/gapminder.csv")
 
 # 2. Sort the data so that the country with the highest per capita GDP
 # (gdpPercap) is at the top. Save the result to answer_2
 
+arrange(gapminder, desc(gdpPercap))
+answer_2 <- arrange(gapminder, desc(gdpPercap))
 
 # 3. Filter the gapminder data to the most recent year in the
 # dataset, then select only the country and population columns. DO NOT use the
